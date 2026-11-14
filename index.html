@@ -1,205 +1,55 @@
- 
+
 <!DOCTYPE html>
 <html lang="hi">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Hindi Student Help - विद्यार्थियों के लिए मुफ्त कैलकुलेटर, परीक्षा तैयारी और स्टडी मटेरियल।">
 <title>Hindi Student Help</title>
 
 <style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: Arial, sans-serif;
-  background: #f4f7ff;
-  color: #172554;
-}
-
-header {
-  background: white;
-  padding: 18px 6%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  box-shadow: 0 2px 10px #0001;
-}
-
-.logo {
-  font-size: 21px;
-  font-weight: bold;
-  color: #1746a2;
-}
-
-nav a {
-  text-decoration: none;
-  color: #334155;
-  margin-left: 12px;
-  font-size: 14px;
-}
-
-.hero {
-  background: linear-gradient(120deg,#123b80,#3979e8);
-  color: white;
-  text-align: center;
-  padding: 55px 15px;
-}
-
-.hero h1 {
-  font-size: 32px;
-  margin-bottom: 12px;
-}
-
-.hero p {
-  margin-bottom: 22px;
-}
-
-.search {
-  display: flex;
-  max-width: 450px;
-  margin: auto;
-  background: white;
-  border-radius: 8px;
-  overflow: hidden;
-}
-
-.search input {
-  flex: 1;
-  min-width: 0;
-  padding: 14px;
-  border: none;
-  outline: none;
-}
-
-.search button {
-  padding: 12px 20px;
-  border: none;
-  background: #ffbd35;
-  font-weight: bold;
-}
-
-.container {
-  max-width: 1050px;
-  margin: auto;
-  padding: 35px 18px;
-}
-
-.section-title {
-  margin-bottom: 20px;
-}
-
-.cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(210px,1fr));
-  gap: 18px;
-}
-
-.card {
-  background: white;
-  padding: 23px 15px;
-  border-radius: 13px;
-  text-align: center;
-  box-shadow: 0 3px 14px #0000000c;
-}
-
-.card .icon {
-  font-size: 35px;
-  margin-bottom: 12px;
-}
-
-.card h3 {
-  margin-bottom: 10px;
-}
-
-.card p {
-  color: #64748b;
-  font-size: 14px;
-  line-height: 1.5;
-}
-
-.card button {
-  margin-top: 15px;
-  padding: 10px 17px;
-  background: #1746a2;
-  color: white;
-  border: none;
-  border-radius: 7px;
-  cursor: pointer;
-}
-
-.calculator {
-  background: white;
-  padding: 24px;
-  border-radius: 14px;
-  margin-top: 35px;
-  box-shadow: 0 3px 14px #0000000c;
-}
-
-.calculator h2 {
-  margin-bottom: 15px;
-}
-
-.calculator input {
-  width: 100%;
-  padding: 13px;
-  margin: 8px 0;
-  border: 1px solid #cbd5e1;
-  border-radius: 7px;
-  font-size: 16px;
-}
-
-.calculator button {
-  width: 100%;
-  padding: 13px;
-  margin-top: 10px;
-  background: #1746a2;
-  color: white;
-  border: none;
-  border-radius: 7px;
-  font-size: 16px;
-}
-
-#result {
-  margin-top: 15px;
-  font-size: 20px;
-  font-weight: bold;
-  color: #087443;
-}
-
-.notice {
-  background: #e5edff;
-  padding: 25px;
-  margin-top: 30px;
-  border-radius: 12px;
-  text-align: center;
-}
-
-footer {
-  background: #102b59;
-  color: white;
-  text-align: center;
-  padding: 28px 15px;
-  margin-top: 30px;
-}
-
-footer p {
-  margin-top: 8px;
-  font-size: 13px;
-  color: #cbd5e1;
-}
-
-@media(max-width:600px) {
-  header {
-    flex-direction: column;
-    gap: 15px;
-  }
-
-  .hero h1 {
-    font-size: 26px;
-  }
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:Arial,sans-serif;background:#f4f7ff;color:#172554;line-height:1.6}
+header{background:white;padding:16px 6%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;box-shadow:0 2px 10px #0001}
+.logo{font-size:21px;font-weight:bold;color:#1746a2}
+nav{display:flex;gap:14px;flex-wrap:wrap}
+nav a{text-decoration:none;color:#334155;font-size:14px}
+.hero{background:linear-gradient(120deg,#123b80,#3979e8);color:white;text-align:center;padding:48px 15px}
+.hero h1{font-size:30px;margin-bottom:10px}
+.hero p{margin-bottom:20px}
+.search{display:flex;max-width:500px;margin:auto;background:white;border-radius:8px;overflow:hidden}
+.search input{flex:1;min-width:0;padding:14px;border:0;outline:0;font-size:15px}
+button{cursor:pointer}
+.search button{padding:12px 20px;border:0;background:#ffbd35;font-weight:bold}
+.container{max-width:1050px;margin:auto;padding:30px 18px}
+.section-title{margin-bottom:18px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:17px}
+.card{background:white;padding:22px 15px;border-radius:13px;text-align:center;box-shadow:0 3px 14px #0000000c}
+.icon{font-size:34px;margin-bottom:8px}
+.card h3{margin-bottom:8px}
+.card p{color:#64748b;font-size:14px}
+.btn{margin-top:14px;padding:10px 17px;background:#1746a2;color:white;border:0;border-radius:7px;font-size:14px}
+.panel{background:white;padding:23px;border-radius:14px;margin-top:25px;box-shadow:0 3px 14px #0000000c;scroll-margin-top:15px}
+.panel h2{margin-bottom:12px}
+.panel p{margin:8px 0}
+.panel input,.panel select,.panel textarea{width:100%;padding:12px;margin:7px 0;border:1px solid #cbd5e1;border-radius:7px;font-size:16px;background:white}
+.panel textarea{min-height:90px}
+.action{width:100%;padding:13px;margin-top:10px;background:#1746a2;color:white;border:0;border-radius:7px;font-size:16px}
+.result{margin-top:14px;padding:12px;background:#edfdf4;color:#087443;border-radius:7px;font-weight:bold;overflow-wrap:anywhere}
+.note{font-size:13px;color:#64748b;margin-top:10px}
+.hidden{display:none}
+.lesson{background:#f7f9ff;padding:15px;border-radius:9px;margin:12px 0}
+.lesson h3{margin-bottom:6px}
+.lesson p{margin:5px 0}
+.notice{background:#e5edff;padding:24px;margin-top:25px;border-radius:12px;text-align:center}
+footer{background:#102b59;color:white;text-align:center;padding:26px 15px;margin-top:30px}
+footer p{color:#cbd5e1;font-size:13px;margin-top:7px}
+@media(max-width:600px){
+ header{flex-direction:column}
+ .hero h1{font-size:25px}
+ .container{padding:25px 13px}
+ .panel{padding:17px}
 }
 </style>
 </head>
@@ -207,23 +57,24 @@ footer p {
 <body>
 
 <header>
-  <div class="logo">🎓 Hindi Student Help</div>
-  <nav>
-    <a href="#">Home</a>
-    <a href="#tools">Tools</a>
-    <a href="#about">About</a>
-  </nav>
+ <div class="logo">🎓 Hindi Student Help</div>
+ <nav>
+  <a href="#">Home</a>
+  <a href="#tools">Tools</a>
+  <a href="#exams">Exams</a>
+  <a href="#study">Study Material</a>
+  <a href="#about">About</a>
+ </nav>
 </header>
 
 <section class="hero">
-  <h1>आपकी पढ़ाई, अब होगी आसान!</h1>
-  <p>Students के लिए Free Online Tools और जरूरी जानकारी।</p>
-
-  <div class="search">
-    <input id="searchInput" type="text"
-      placeholder="अपना टूल खोजें...">
-    <button onclick="searchTools()">Search</button>
-  </div>
+ <h1>आपकी पढ़ाई, अब होगी आसान!</h1>
+ <p>Students के लिए Free Online Tools और जरूरी जानकारी।</p>
+ <div class="search">
+  <input id="searchInput" placeholder="अपना टूल या विषय खोजें...">
+  <button onclick="searchTools()">Search</button>
+ </div>
+ <p id="searchMessage" aria-live="polite"></p>
 </section>
 
 <main class="container" id="tools">
@@ -232,119 +83,316 @@ footer p {
 
 <div class="cards" id="toolCards">
 
-  <div class="card">
-    <div class="icon">🧮</div>
-    <h3>प्रतिशत कैलकुलेटर</h3>
-    <p>परीक्षा का प्रतिशत निकालें।</p>
-    <button onclick="document.getElementById('calculator').scrollIntoView({behavior:'smooth'})">अभी इस्तेमाल करें</button>
-  </div>
+ <div class="card">
+  <div class="icon">🧮</div>
+  <h3>प्रतिशत कैलकुलेटर</h3>
+  <p>परीक्षा का प्रतिशत निकालें।</p>
+  <button class="btn" onclick="goTo('percentage')">इस्तेमाल करें</button>
+ </div>
 
-  <div class="card">
-    <div class="icon">🎓</div>
-    <h3>CGPA कैलकुलेटर</h3>
-    <p>अपना CGPA समझें।</p>
-    <button onclick="alert('CGPA Calculator जल्द आ रहा है!')">जल्द आ रहा है</button>
-  </div>
+ <div class="card">
+  <div class="icon">🎓</div>
+  <h3>CGPA कैलकुलेटर</h3>
+  <p>CGPA और प्रतिशत की गणना करें।</p>
+  <button class="btn" onclick="goTo('cgpa')">इस्तेमाल करें</button>
+ </div>
 
-  <div class="card">
-    <div class="icon">🎂</div>
-    <h3>उम्र कैलकुलेटर</h3>
-    <p>अपनी उम्र जानें।</p>
-    <button onclick="alert('Age Calculator जल्द आ रहा है!')">जल्द आ रहा है</button>
-  </div>
+ <div class="card">
+  <div class="icon">🎂</div>
+  <h3>उम्र कैलकुलेटर</h3>
+  <p>जन्मतिथि से उम्र जानें।</p>
+  <button class="btn" onclick="goTo('age')">इस्तेमाल करें</button>
+ </div>
 
-  <div class="card">
-    <div class="icon">💰</div>
-    <h3>सैलरी कैलकुलेटर</h3>
-    <p>सैलरी और ओवरटाइम का हिसाब।</p>
-    <button onclick="alert('Salary Calculator जल्द आ रहा है!')">जल्द आ रहा है</button>
-  </div>
+ <div class="card">
+  <div class="icon">💰</div>
+  <h3>सैलरी कैलकुलेटर</h3>
+  <p>सैलरी और ओवरटाइम का हिसाब।</p>
+  <button class="btn" onclick="goTo('salary')">इस्तेमाल करें</button>
+ </div>
 
-  <div class="card">
-    <div class="icon">📚</div>
-    <h3>Exam Preparation</h3>
-    <p>परीक्षा की तैयारी की जानकारी।</p>
-    <button onclick="alert('Exam Preparation जल्द आ रहा है!')">जल्द आ रहा है</button>
-  </div>
+ <div class="card">
+  <div class="icon">📚</div>
+  <h3>Exam Preparation</h3>
+  <p>परीक्षा के विषय और पढ़ाई की योजना।</p>
+  <button class="btn" onclick="goTo('exams')">इस्तेमाल करें</button>
+ </div>
 
-  <div class="card">
-    <div class="icon">📝</div>
-    <h3>Study Material</h3>
-    <p>पढ़ाई के लिए उपयोगी सामग्री।</p>
-    <button onclick="alert('Study Material जल्द आ रहा है!')">जल्द आ रहा है</button>
-  </div>
+ <div class="card">
+  <div class="icon">📝</div>
+  <h3>Study Material</h3>
+  <p>Maths, Reasoning, GK और English नोट्स।</p>
+  <button class="btn" onclick="goTo('study')">इस्तेमाल करें</button>
+ </div>
 
 </div>
 
-<section class="calculator" id="calculator">
-  <h2>🧮 प्रतिशत कैलकुलेटर</h2>
-  <p>प्राप्त अंक और कुल अंक लिखें।</p>
+<!-- PERCENTAGE -->
+<section class="panel" id="percentage">
+ <h2>🧮 प्रतिशत कैलकुलेटर</h2>
+ <p>प्राप्त अंक और कुल अंक दर्ज करें।</p>
+ <input type="number" id="obtained" placeholder="प्राप्त अंक" min="0">
+ <input type="number" id="total" placeholder="कुल अंक" min="1">
+ <button class="action" onclick="calculatePercentage()">प्रतिशत निकालें</button>
+ <div class="result hidden" id="percentageResult" aria-live="polite"></div>
+</section>
 
-  <input type="number" id="obtained"
-    placeholder="प्राप्त अंक">
+<!-- CGPA -->
+<section class="panel" id="cgpa">
+ <h2>🎓 CGPA कैलकुलेटर</h2>
+ <p>अपना CGPA 10 में से दर्ज करें।</p>
+ <input type="number" id="cgpaValue" placeholder="जैसे 7.5" min="0" max="10" step="0.01">
+ <p>विश्वविद्यालय का Conversion Factor (यदि मालूम हो):</p>
+ <input type="number" id="factor" placeholder="जैसे 9.5" min="0.01" step="0.01">
+ <button class="action" onclick="calculateCGPA()">CGPA निकालें</button>
+ <div class="result hidden" id="cgpaResult" aria-live="polite"></div>
+ <p class="note">प्रतिशत का फॉर्मूला हर विश्वविद्यालय में अलग हो सकता है। गुणांक खाली छोड़ने पर केवल CGPA दिखेगा। अपने विश्वविद्यालय का आधिकारिक नियम जरूर जाँचें।</p>
+</section>
 
-  <input type="number" id="total"
-    placeholder="कुल अंक">
+<!-- AGE -->
+<section class="panel" id="age">
+ <h2>🎂 उम्र कैलकुलेटर</h2>
+ <p>अपनी जन्मतिथि चुनें।</p>
+ <input type="date" id="birthDate">
+ <button class="action" onclick="calculateAge()">उम्र निकालें</button>
+ <div class="result hidden" id="ageResult" aria-live="polite"></div>
+</section>
 
-  <button onclick="calculate()">प्रतिशत निकालें</button>
+<!-- SALARY -->
+<section class="panel" id="salary">
+ <h2>💰 सैलरी और ओवरटाइम कैलकुलेटर</h2>
+ <p>अपनी मासिक बेस सैलरी दर्ज करें।</p>
+ <input type="number" id="baseSalary" placeholder="मासिक बेस सैलरी ₹" min="0">
+ <input type="number" id="workDays" placeholder="महीने में काम के दिन (जैसे 26)" min="1">
+ <input type="number" id="dailyHours" placeholder="रोज काम के घंटे (जैसे 8)" min="1">
+ <input type="number" id="otHours" placeholder="कुल ओवरटाइम घंटे" min="0">
+ <input type="number" id="otMultiplier" placeholder="OT गुणांक (जैसे 2)" min="0" step="0.1">
+ <button class="action" onclick="calculateSalary()">सैलरी निकालें</button>
+ <div class="result hidden" id="salaryResult" aria-live="polite"></div>
+ <p class="note">यह अनुमानित गणना है। इसमें बेस सैलरी से प्रति घंटे की दर निकाली जाती है। वास्तविक वेतन, भत्ते, कटौती और OT नियम कंपनी के अनुसार अलग हो सकते हैं।</p>
+</section>
 
-  <div id="result"></div>
+<!-- EXAM PREPARATION -->
+<section class="panel" id="exams">
+ <h2>📚 Exam Preparation</h2>
+ <p>अपनी परीक्षा चुनें:</p>
+ <select id="examSelect" onchange="showExam()">
+  <option value="">परीक्षा चुनें</option>
+  <option value="ntpc">RRB NTPC</option>
+  <option value="groupd">RRB Group D</option>
+  <option value="bssc">BSSC</option>
+  <option value="general">सामान्य प्रतियोगी परीक्षा</option>
+ </select>
+ <div id="examContent" class="lesson">
+  परीक्षा चुनने पर विषय और तैयारी की जानकारी यहाँ दिखेगी।
+ </div>
+ <div class="lesson">
+  <h3>📅 रोज की पढ़ाई की योजना</h3>
+  <p>1 घंटा गणित, 1 घंटा रीजनिंग, 1 घंटा सामान्य ज्ञान और 30 मिनट पुराने प्रश्नों का अभ्यास करें। अपनी परीक्षा के समय के अनुसार योजना बदलें।</p>
+ </div>
+ <p class="note">यह सामान्य तैयारी मार्गदर्शन है। परीक्षा का नवीनतम सिलेबस, योग्यता और पैटर्न आधिकारिक नोटिफिकेशन से जाँचें।</p>
+</section>
+
+<!-- STUDY MATERIAL -->
+<section class="panel" id="study">
+ <h2>📝 Study Material</h2>
+ <p>विषय चुनें:</p>
+ <select id="subjectSelect" onchange="showStudy()">
+  <option value="">विषय चुनें</option>
+  <option value="math">गणित (Maths)</option>
+  <option value="reasoning">रीजनिंग (Reasoning)</option>
+  <option value="gk">सामान्य ज्ञान (GK)</option>
+  <option value="english">English</option>
+ </select>
+ <div id="studyContent" class="lesson">
+  विषय चुनने पर पढ़ाई की सामग्री यहाँ दिखाई देगी।
+ </div>
 </section>
 
 <section class="notice" id="about">
-  <h2>हमारा उद्देश्य</h2>
-  <p>हर विद्यार्थी तक मुफ्त डिजिटल टूल्स और उपयोगी जानकारी पहुँचाना।</p>
+ <h2>हमारा उद्देश्य</h2>
+ <p>हर विद्यार्थी तक मुफ्त डिजिटल टूल्स और उपयोगी जानकारी पहुँचाना।</p>
+ <p>Hindi Student Help एक स्वतंत्र शैक्षणिक वेबसाइट है।</p>
 </section>
 
 </main>
 
 <footer>
-  <h3>Hindi Student Help</h3>
-  <p>Learning Made Simple | © 2026</p>
-  <p>एक स्वतंत्र शैक्षणिक वेबसाइट</p>
+ <h3>🎓 Hindi Student Help</h3>
+ <p>Learning Made Simple | © 2026</p>
+ <p>मुफ्त शैक्षणिक टूल्स और पढ़ाई की सामग्री</p>
 </footer>
 
 <script>
-function searchTools() {
-  const query = document.getElementById("searchInput")
-    .value.toLowerCase().trim();
-
-  const cards = document.querySelectorAll(".card");
-  let found = 0;
-
-  cards.forEach(card => {
-    const match = card.innerText.toLowerCase().includes(query);
-    card.style.display = match ? "block" : "none";
-    if(match) found++;
-  });
-
-  if(!query) {
-    cards.forEach(card => card.style.display = "block");
-  } else if(found === 0) {
-    alert("कोई टूल नहीं मिला!");
-  }
+function goTo(id){
+ document.getElementById(id).scrollIntoView({behavior:"smooth"});
 }
 
-function calculate() {
-  const obtained = Number(document.getElementById("obtained").value);
-  const total = Number(document.getElementById("total").value);
-  const result = document.getElementById("result");
+function showResult(id,message){
+ const box=document.getElementById(id);
+ box.textContent=message;
+ box.classList.remove("hidden");
+}
 
-  if(
-    document.getElementById("obtained").value === "" ||
-    document.getElementById("total").value === "" ||
-    !Number.isFinite(obtained) ||
-    !Number.isFinite(total) ||
-    total <= 0 ||
-    obtained < 0 ||
-    obtained > total
-  ) {
-    result.innerText = "कृपया सही अंक दर्ज करें।";
-    return;
+function calculatePercentage(){
+ const a=document.getElementById("obtained").value;
+ const b=document.getElementById("total").value;
+ const x=Number(a),y=Number(b);
+
+ if(a===""||b===""||!Number.isFinite(x)||!Number.isFinite(y)||y<=0||x<0||x>y){
+  showResult("percentageResult","कृपया सही अंक दर्ज करें। प्राप्त अंक कुल अंकों से अधिक नहीं हो सकते।");
+  return;
+ }
+ showResult("percentageResult","आपका प्रतिशत: "+((x/y)*100).toFixed(2)+"%");
+}
+
+function calculateCGPA(){
+ const c=document.getElementById("cgpaValue").value;
+ const f=document.getElementById("factor").value;
+ const x=Number(c);
+
+ if(c===""||!Number.isFinite(x)||x<0||x>10){
+  showResult("cgpaResult","कृपया 0 से 10 के बीच सही CGPA दर्ज करें।");
+  return;
+ }
+
+ let message="आपका CGPA: "+x.toFixed(2)+" / 10";
+
+ if(f!==""){
+  const factor=Number(f);
+  if(!Number.isFinite(factor)||factor<=0){
+   showResult("cgpaResult","कृपया सही Conversion Factor दर्ज करें।");
+   return;
   }
+  message+=" | प्रतिशत: "+(x*factor).toFixed(2)+"%";
+ }
+ showResult("cgpaResult",message);
+}
 
-  const percentage = (obtained / total) * 100;
-  result.innerText = "आपका प्रतिशत: " + percentage.toFixed(2) + "%";
+function calculateAge(){
+ const value=document.getElementById("birthDate").value;
+ if(!value){
+  showResult("ageResult","कृपया जन्मतिथि चुनें।");
+  return;
+ }
+
+ const birth=new Date(value+"T00:00:00");
+ const today=new Date();
+
+ if(Number.isNaN(birth.getTime())||birth>today){
+  showResult("ageResult","कृपया सही जन्मतिथि दर्ज करें।");
+  return;
+ }
+
+ let years=today.getFullYear()-birth.getFullYear();
+ let months=today.getMonth()-birth.getMonth();
+ let days=today.getDate()-birth.getDate();
+
+ if(days<0){
+  months--;
+  const previousMonth=new Date(today.getFullYear(),today.getMonth(),0);
+  days+=previousMonth.getDate();
+ }
+ if(months<0){
+  years--;
+  months+=12;
+ }
+
+ showResult("ageResult","आपकी उम्र: "+years+" साल, "+months+" महीने और "+days+" दिन।");
+}
+
+function calculateSalary(){
+ const salary=document.getElementById("baseSalary").value;
+ const days=document.getElementById("workDays").value;
+ const hours=document.getElementById("dailyHours").value;
+ const ot=document.getElementById("otHours").value;
+ const multiplier=document.getElementById("otMultiplier").value;
+
+ const s=Number(salary),d=Number(days),h=Number(hours);
+ const o=Number(ot),m=Number(multiplier);
+
+ if(salary===""||days===""||hours===""||ot===""||multiplier===""||
+ ![s,d,h,o,m].every(Number.isFinite)||s<0||d<=0||h<=0||o<0||m<0){
+  showResult("salaryResult","कृपया सभी बॉक्स में सही मान दर्ज करें।");
+  return;
+ }
+
+ const hourly=s/(d*h);
+ const otPay=hourly*o*m;
+ const total=s+otPay;
+
+ showResult("salaryResult",
+ "प्रति घंटे की दर: ₹"+hourly.toFixed(2)+
+ " | OT भुगतान: ₹"+otPay.toFixed(2)+
+ " | अनुमानित कुल: ₹"+total.toFixed(2));
+}
+
+const examData={
+ ntpc:{
+  title:"RRB NTPC",
+  subjects:"सामान्य जागरूकता, गणित और सामान्य बुद्धिमत्ता एवं रीजनिंग।",
+  advice:"गणित में प्रतिशत, अनुपात, औसत और समय-दूरी का अभ्यास करें। रीजनिंग में सीरीज, कोडिंग और पहेली पढ़ें। सामान्य जागरूकता में इतिहास, भूगोल, विज्ञान और करंट अफेयर्स पढ़ें।"
+ },
+ groupd:{
+  title:"RRB Group D",
+  subjects:"गणित, सामान्य बुद्धिमत्ता एवं रीजनिंग, सामान्य विज्ञान और सामान्य जागरूकता।",
+  advice:"बुनियादी गणित और कक्षा 10 स्तर के विज्ञान पर ध्यान दें। रोज रीजनिंग और सामान्य ज्ञान के प्रश्न हल करें।"
+ },
+ bssc:{
+  title:"BSSC",
+  subjects:"परीक्षा के पद और अधिसूचना के अनुसार सामान्य अध्ययन, सामान्य विज्ञान, गणित, मानसिक क्षमता और भाषा से जुड़े विषय हो सकते हैं।",
+  advice:"बिहार सामान्य ज्ञान, इतिहास, भूगोल, गणित और रीजनिंग की नियमित तैयारी करें। अपने पद की आधिकारिक अधिसूचना में दिए गए सिलेबस को प्राथमिकता दें।"
+ },
+ general:{
+  title:"सामान्य प्रतियोगी परीक्षा",
+  subjects:"गणित, रीजनिंग, सामान्य ज्ञान, सामान्य विज्ञान और भाषा।",
+  advice:"हर विषय के लिए समय निर्धारित करें। पुराने प्रश्नपत्र हल करें और अपनी गलतियों की अलग कॉपी बनाएँ।"
+ }
+};
+
+function showExam(){
+ const key=document.getElementById("examSelect").value;
+ const box=document.getElementById("examContent");
+
+ if(!key){
+  box.textContent="परीक्षा चुनने पर विषय और तैयारी की जानकारी यहाँ दिखेगी।";
+  return;
+ }
+
+ const e=examData[key];
+ box.innerHTML="<h3>"+e.title+"</h3><p><b>मुख्य विषय:</b> "+e.subjects+"</p><p><b>तैयारी:</b> "+e.advice+"</p>";
+}
+
+const studyData={
+ math:"<h3>गणित (Maths)</h3><p><b>प्रतिशत:</b> प्रतिशत = (प्राप्त भाग ÷ कुल भाग) × 100</p><p><b>औसत:</b> औसत = सभी संख्याओं का योग ÷ कुल संख्याएँ</p><p><b>लाभ:</b> लाभ = विक्रय मूल्य − क्रय मूल्य</p><p><b>हानि:</b> हानि = क्रय मूल्य − विक्रय मूल्य</p>",
+ reasoning:"<h3>रीजनिंग (Reasoning)</h3><p><b>Number Series:</b> संख्याओं के बीच का पैटर्न पहचानें।</p><p><b>Analogy:</b> दो चीजों के बीच संबंध पहचानें।</p><p><b>Coding-Decoding:</b> अक्षरों या संख्याओं के बदले जाने का नियम खोजें।</p><p><b>Direction:</b> उत्तर, दक्षिण, पूर्व और पश्चिम की दिशा समझें।</p>",
+ gk:"<h3>सामान्य ज्ञान (GK)</h3><p>इतिहास, भूगोल, भारतीय संविधान, अर्थव्यवस्था और सामान्य विज्ञान पढ़ें।</p><p>भारत की राजधानी नई दिल्ली है। भारत का संविधान 26 जनवरी 1950 को लागू हुआ था।</p><p>करंट अफेयर्स के लिए नवीनतम विश्वसनीय समाचार और आधिकारिक स्रोत पढ़ें।</p>",
+ english:"<h3>English Basics</h3><p><b>Noun:</b> किसी व्यक्ति, स्थान, वस्तु या विचार का नाम।</p><p><b>Verb:</b> काम या अवस्था बताने वाला शब्द।</p><p><b>Adjective:</b> Noun की विशेषता बताने वाला शब्द।</p><p><b>Example:</b> I go to school. = मैं स्कूल जाता हूँ।</p><p><b>Practice:</b> रोज 5 नए शब्द सीखें और उनसे वाक्य बनाएँ।</p>"
+};
+
+function showStudy(){
+ const key=document.getElementById("subjectSelect").value;
+ const box=document.getElementById("studyContent");
+ box.innerHTML=key?studyData[key]:"विषय चुनने पर पढ़ाई की सामग्री यहाँ दिखाई देगी।";
+}
+
+function searchTools(){
+ const query=document.getElementById("searchInput").value.toLowerCase().trim();
+ const cards=document.querySelectorAll(".card");
+ let found=0;
+
+ cards.forEach(card=>{
+  const match=card.innerText.toLowerCase().includes(query);
+  card.style.display=match?"":"none";
+  if(match)found++;
+ });
+
+ const message=document.getElementById("searchMessage");
+ if(!query){
+  message.textContent="सभी टूल दिखाए जा रहे हैं।";
+ }else{
+  message.textContent=found?found+" टूल मिले।":"कोई टूल नहीं मिला।";
+ }
 }
 </script>
 
